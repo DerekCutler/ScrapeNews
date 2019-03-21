@@ -74,7 +74,7 @@ app.get("/scrape", function(req, res) {
     });
 
     // Send a message to the client
-    res.send("<a href="./">Scrape Me My Friend</a>");
+    res.send("Scrape Me My Friend.\n\nVisit https://tranquil-river-61541.herokuapp.com/ to see the magic...");
   });
 });
 
