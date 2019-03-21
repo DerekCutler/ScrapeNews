@@ -74,7 +74,7 @@ app.get("/scrape", function(req, res) {
     });
 
     // Send a message to the client
-    res.send("Scrape me my friend");
+    res.send(<a href="./">Scrape Me My Friend</a>);
   });
 });
 
