@@ -1,54 +1,89 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
-    <style>
-      body { background-color: #c3e6d8 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-        color: #3f1c2a;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-        color: #2b596a;
-      }
-      #notes {
-        float: right;
-        width: 42;
-        color: #2b596a;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: #AAFF71;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>News Scraper</h1>
-      <h2><i>Scrape down the hill news</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Scraping Ski News</title>
+  <style>
+    body {
+      background-color: #c3e6d8;
+      background-image: url("./UN.jpg")
+    }
+
+    .nav-wrapper {
+      background-color: #1c0e14 !important;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    #wrapper {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5%;
+      color: #e0eee8;
+    }
+
+    #articles {
+      display: inline-block;
+      overflow: auto;
+      width: 90%;
+      height: 700px;
+      color: #b1d30d;
+    }
+
+    #notes {
+      float: right;
+      width: 42;
+      color: #2b596a;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      background-color: #AAFF71;
+    }
+
+    input {
+      height: 36px;
+      font-size: 24px;
+    }
+
+    textarea {
+      height: 200px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Ski News</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="./scrape">Scrape Me</a></li>
+          <li><a href="./articles">Raw Articles</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="wrapper">
+
+    <h1><i>Scrape down the hill news</i></h1>
+    <div id="articles"></div>
+    <div id="notes"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>
