@@ -11,10 +11,13 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
+
+//ADDED router
+var routes = express.Router();
 
 // Configure middleware
 
@@ -31,7 +34,12 @@ mongoose.connect("mongodb://localhost/scrape", { useNewUrlParser: true });
 
 // Routes
 
-// A GET route for scraping the echoJS website
+// Home Route
+app.get("/", function(req, res) {
+  res.render("home")
+ });
+
+// A GET route for scraping the Unofficial Networks website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
   axios.get("https://unofficialnetworks.com/").then(function(response) {
